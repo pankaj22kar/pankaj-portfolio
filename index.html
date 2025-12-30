@@ -1,112 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pankaj Baviskar | Software Engineer</title>
-  <meta name="description" content="Portfolio of Pankaj Baviskar – .NET Developer & Automotive Software Engineer" />
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f4f6f8; color: #333; }
-    header { background: #0a3d62; color: #fff; padding: 40px 20px; text-align: center; }
-    header h1 { margin: 0; font-size: 36px; }
-    header p { font-size: 18px; }
-    section { padding: 40px 20px; max-width: 1100px; margin: auto; }
-    h2 { color: #0a3d62; border-bottom: 2px solid #0a3d62; display: inline-block; padding-bottom: 5px; }
-    .skills, .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-    .card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-    footer { background: #0a3d62; color: #fff; text-align: center; padding: 20px; }
-    a { color: #0a3d62; text-decoration: none; font-weight: bold; }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pankaj Baviskar | Software Engineer</title>
+
+<meta name="description" content="Portfolio of Pankaj Baviskar – .NET Developer & Automotive Software Engineer">
+
+<style>
+:root {
+  --primary:#0a3d62;
+  --secondary:#1e90ff;
+  --bg:#f4f6f8;
+  --dark:#222;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #fff;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+header h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 18px;
+  margin: 6px 0;
+}
+
+header .btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 30px;
+  background: #fff;
+  color: var(--primary);
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+header .btn:hover {
+  background: #eaeaea;
+  transform: translateY(-2px);
+}
+
+/* ---------- SECTIONS ---------- */
+section {
+  padding: 60px 20px;
+  max-width: 1150px;
+  margin: auto;
+}
+
+h2 {
+  color: var(--primary);
+  margin-bottom: 30px;
+  font-size: 30px;
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: var(--secondary);
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+}
+
+/* ---------- CARDS ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+/* ---------- LIST ---------- */
+ul {
+  padding-left: 18px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* ---------- SERVICES ---------- */
+.service-icon {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: var(--secondary);
+}
+
+/* ---------- ACHIEVEMENTS ---------- */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+
+.stat {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+.stat h3 {
+  font-size: 36px;
+  color: var(--primary);
+  margin: 0;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background: var(--primary);
+  color: #fff;
+  text-align: center;
+  padding: 30px 15px;
+}
+
+footer a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: underline;
+}
+</style>
 </head>
+
 <body>
 
 <header>
   <h1>Pankaj Shantilal Baviskar</h1>
   <p>.NET Developer | Automotive Software Engineer</p>
   <p>Pune, India | 📞 +91 9765305500 | ✉️ 22kar.pk@gmail.com</p>
+  <a class="btn" href="#contact">Hire Me</a>
 </header>
 
 <section>
   <h2>About Me</h2>
   <p>
-    I am a Software Engineer with 5+ years of experience in .NET technologies and automotive testing software. 
-    I specialize in building web and desktop applications, ECU communication tools, engine testing systems, and centralized databases. 
-    I am passionate about delivering reliable, scalable, and performance-driven solutions.
+    I am a passionate Software Engineer with <strong>5+ years of experience</strong> in
+    .NET technologies and automotive testing software.
+    I work on enterprise-grade web & desktop applications, ECU communication,
+    engine testing systems, and MES/SAP-integrated solutions.
   </p>
 </section>
 
 <section>
   <h2>Technical Skills</h2>
-  <div class="skills">
-    <div class="card"><strong>Languages</strong><br/>C#, HTML, JavaScript, jQuery, CSS, Bootstrap</div>
-    <div class="card"><strong>Frameworks</strong><br/>ASP.NET, ASP.NET MVC, ADO.NET, Entity Framework</div>
-    <div class="card"><strong>Databases</strong><br/>SQL Server, Firebase</div>
-    <div class="card"><strong>Tools & Platforms</strong><br/>IIS, Git, SVN, REST API</div>
-    <div class="card"><strong>Domain</strong><br/>Automotive Software, ECU Flashing, Engine Testing</div>
+  <div class="grid">
+    <div class="card"><strong>Languages</strong><br>C#, HTML, CSS, JavaScript, jQuery</div>
+    <div class="card"><strong>Frameworks</strong><br>ASP.NET, MVC, ADO.NET, Entity Framework</div>
+    <div class="card"><strong>Databases</strong><br>SQL Server, Firebase</div>
+    <div class="card"><strong>Tools</strong><br>IIS, Git, SVN, REST APIs</div>
+    <div class="card"><strong>Domain</strong><br>Automotive, ECU Flashing, Engine Testing</div>
   </div>
 </section>
 
 <section>
-  <h2>Work Experience</h2>
+  <h2>Professional Experience</h2>
+
   <div class="card">
-    <h3>Dynomerk Controls India Pvt. Ltd. – Pune</h3>
+    <h3>Dynomerk Controls India Pvt. Ltd – Pune</h3>
     <p><strong>Assistant Software Engineer</strong> (Feb 2020 – Present)</p>
     <ul>
-      <li>Developed and maintained .NET web & desktop applications</li>
-      <li>Worked on ECU flashing, diagnostics, and engine testing software</li>
-      <li>Integrated REST APIs and SQL Server databases</li>
-      <li>Provided training and support to junior engineers</li>
+      <li>Developed automotive testing & ECU flashing software</li>
+      <li>Designed MES & SAP integrated web systems</li>
+      <li>Worked on real-time engine & chassis dyno applications</li>
+      <li>Handled SQL Server optimization and production support</li>
     </ul>
   </div>
-  <br/>
+
+  <br>
+
   <div class="card">
     <h3>Iconsys Tech Vision Pvt. Ltd.</h3>
     <p><strong>Junior Software Engineer</strong> (Dec 2018 – Dec 2019)</p>
     <ul>
-      <li>Developed customer-facing web applications</li>
-      <li>Designed UI screens and resolved production issues</li>
+      <li>Developed ASP.NET web applications</li>
+      <li>UI designing and issue resolution</li>
     </ul>
   </div>
 </section>
 
 <section>
   <h2>Key Projects</h2>
-  <div class="projects">
+  <div class="grid">
     <div class="card">
       <h3>CDMS – Centralized Database Management System</h3>
-      <p>Web-based system for ECU flashing and vehicle test data management. Integrated with SAP for data exchange.</p>
+      <p>Vehicle test data, ECU flashing & SAP integration.</p>
       <p><strong>Clients:</strong> Bajaj Auto, Suzuki, Tata Motors</p>
     </div>
     <div class="card">
-      <h3>ECU Communication & Flashing Tool</h3>
-      <p>Desktop application for ECU diagnostics, parameter tuning, and firmware flashing.</p>
+      <h3>ECU Flashing & Diagnostics Tool</h3>
+      <p>Desktop application for ECU parameter tuning & firmware flashing.</p>
     </div>
     <div class="card">
-      <h3>Engine Testing Application</h3>
-      <p>Real-time engine performance monitoring and automated testing software for R&D and production lines.</p>
+      <h3>Engine & Chassis Dyno Software</h3>
+      <p>Real-time monitoring with automated test execution.</p>
     </div>
     <div class="card">
       <h3>EDSM with GST</h3>
-      <p>Windows-based billing and inventory system with GST compliance and reporting.</p>
+      <p>Billing & inventory system with GST reports.</p>
     </div>
   </div>
 </section>
 
 <section>
-  <h2>Education</h2>
-  <div class="card">
-    <p><strong>MCA</strong> – North Maharashtra University, Jalgaon (2018)</p>
-    <p><strong>B.Sc. Computer Science</strong> – North Maharashtra University, Jalgaon (2015)</p>
+  <h2>Services</h2>
+  <div class="grid">
+    <div class="card"><div class="service-icon">💻</div>Web & Desktop Development</div>
+    <div class="card"><div class="service-icon">🚗</div>Automotive Testing Software</div>
+    <div class="card"><div class="service-icon">🔌</div>ECU Flashing & Diagnostics</div>
+    <div class="card"><div class="service-icon">🗄️</div>SQL Server & Database Design</div>
   </div>
 </section>
 
 <section>
-  <h2>Certifications</h2>
+  <h2>Achievements</h2>
+  <div class="stats">
+    <div class="stat"><h3>5+</h3>Years Experience</div>
+    <div class="stat"><h3>20+</h3>Projects Delivered</div>
+    <div class="stat"><h3>10+</h3>Automotive Test Modes</div>
+    <div class="stat"><h3>5+</h3>OEM Clients</div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
   <div class="card">
-    <ul>
-      <li>Certification in .NET Technologies – Naresh IT, Hyderabad</li>
-      <li>Soft Skills & Employability Training – Global Education Pvt. Ltd.</li>
-    </ul>
+    <p><strong>Email:</strong> 22kar.pk@gmail.com</p>
+    <p><strong>Mobile:</strong> +91 9765305500</p>
+    <p><strong>Location:</strong> Pune, India</p>
+    <p><strong>LinkedIn:</strong> <a href="#">linkedin.com/in/pankaj-baviskar</a></p>
   </div>
 </section>
 
