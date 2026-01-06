@@ -3,185 +3,214 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Pankaj Baviskar | Software Engineer</title>
+<title>Pankaj Baviskar | Software Developer</title>
 
-<meta name="description" content="Portfolio of Pankaj Baviskar – .NET Developer & Automotive Software Engineer">
+<meta name="description" content="Professional Software Developer Portfolio – .NET, Backend Development, SQL Server, Enterprise Applications">
 
 <style>
-:root {
-  --primary:#0a3d62;
-  --secondary:#1e90ff;
-  --bg:#f4f6f8;
-  --dark:#222;
+:root{
+  --accent:#00e0ff;
+  --glass:rgba(255,255,255,0.14);
+  --border:rgba(255,255,255,0.28);
 }
 
-* { box-sizing: border-box; }
+*{ box-sizing:border-box; }
 
-body {
-  margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: var(--bg);
-  color: #333;
-  line-height: 1.6;
+/* ---------- BODY ---------- */
+body{
+  margin:0;
+  font-family:"Segoe UI",Arial,sans-serif;
+  color:#fff;
+  line-height:1.65;
+
+  /* FREE ONLINE SOFTWARE DEVELOPER BACKGROUND (Unsplash) */
+  background:
+    linear-gradient(rgba(8,15,25,0.88), rgba(8,15,25,0.88)),
+    url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1920&q=80");
+
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
 }
 
 /* ---------- HEADER ---------- */
-header {
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  color: #fff;
-  text-align: center;
-  padding: 70px 20px;
+header{
+  text-align:center;
+  padding:70px 20px 50px;
 }
 
-header h1 {
-  font-size: 42px;
-  margin-bottom: 10px;
+/* LOGO */
+.logo{
+  width:70px;
+  height:70px;
+  margin:0 auto 15px;
+  border-radius:16px;
+  background:linear-gradient(135deg,#1e90ff,var(--accent));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  font-weight:bold;
+  box-shadow:0 12px 35px rgba(0,0,0,0.5);
 }
 
-header p {
-  font-size: 18px;
-  margin: 6px 0;
+header h1{
+  font-size:42px;
+  margin:8px 0;
 }
 
-header .btn {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 12px 30px;
-  background: #fff;
-  color: var(--primary);
-  border-radius: 30px;
-  font-weight: bold;
-  transition: 0.3s;
+header span{ color:var(--accent); }
+
+header p{
+  font-size:16px;
+  opacity:0.9;
 }
 
-header .btn:hover {
-  background: #eaeaea;
-  transform: translateY(-2px);
+/* BUTTON */
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 32px;
+  background:linear-gradient(135deg,#1e90ff,var(--accent));
+  border-radius:30px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+  transition:0.3s;
 }
+
+.btn:hover{ transform:translateY(-3px); }
 
 /* ---------- SECTIONS ---------- */
-section {
-  padding: 60px 20px;
-  max-width: 1150px;
-  margin: auto;
+section{
+  max-width:1150px;
+  margin:auto;
+  padding:45px 20px;
 }
 
-h2 {
-  color: var(--primary);
-  margin-bottom: 30px;
-  font-size: 30px;
-  position: relative;
+h2{
+  font-size:30px;
+  margin-bottom:22px;
 }
 
-h2::after {
-  content: "";
-  width: 60px;
-  height: 4px;
-  background: var(--secondary);
-  position: absolute;
-  bottom: -10px;
-  left: 0;
+h2::after{
+  content:"";
+  display:block;
+  width:60px;
+  height:3px;
+  margin-top:8px;
+  background:linear-gradient(90deg,#1e90ff,var(--accent));
 }
 
-/* ---------- CARDS ---------- */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
+/* ---------- GLASS CARD ---------- */
+.card{
+  background:var(--glass);
+  backdrop-filter:blur(16px);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.45);
+  margin-bottom:18px;
 }
 
-.card {
-  background: #fff;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
-  transition: 0.3s;
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:18px;
 }
 
-.card:hover {
-  transform: translateY(-6px);
+ul{ padding-left:18px; }
+li{ margin-bottom:8px; }
+
+/* ---------- STATS ---------- */
+.stats{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:18px;
+  text-align:center;
 }
 
-/* ---------- LIST ---------- */
-ul {
-  padding-left: 18px;
-}
-
-li {
-  margin-bottom: 8px;
-}
-
-/* ---------- SERVICES ---------- */
-.service-icon {
-  font-size: 30px;
-  margin-bottom: 10px;
-  color: var(--secondary);
-}
-
-/* ---------- ACHIEVEMENTS ---------- */
-.stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  text-align: center;
-}
-
-.stat {
-  background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
-}
-
-.stat h3 {
-  font-size: 36px;
-  color: var(--primary);
-  margin: 0;
+.stat h3{
+  font-size:36px;
+  color:var(--accent);
+  margin:0;
 }
 
 /* ---------- FOOTER ---------- */
-footer {
-  background: var(--primary);
-  color: #fff;
-  text-align: center;
-  padding: 30px 15px;
+footer{
+  text-align:center;
+  padding:30px 20px;
+  opacity:0.75;
 }
 
-footer a {
-  color: #fff;
-  font-weight: bold;
-  text-decoration: underline;
-}
+a{ color:var(--accent); }
 </style>
 </head>
 
 <body>
 
 <header>
-  <h1>Pankaj Shantilal Baviskar</h1>
-  <p>.NET Developer | Software Engineer</p>
-  <p>Pune, India | 📞 +91 9765305500 | ✉️ 22kar.pk@gmail.com</p>
-  <a class="btn" href="#contact">Hire Me</a>
+  <div class="logo">PB</div>
+  <h1>Pankaj <span>Baviskar</span></h1>
+  <p>Software Developer | .NET Backend Engineer</p>
+  <p>Pune, India · 📞 +91 9765305500 · ✉️ 22kar.pk@gmail.com</p>
+  <a href="#contact" class="btn">Contact Me</a>
 </header>
 
 <section>
-  <h2>About Me</h2>
-  <p>
-    I am a passionate Software Engineer with <strong>5+ years of experience</strong> in
-    .NET technologies and automotive testing software.
-    I work on enterprise-grade web & desktop applications, ECU communication,
-    engine testing systems, and MES/SAP-integrated solutions.
-  </p>
+  <h2>Professional Summary</h2>
+  <div class="card">
+    <ul>
+      <li>Software Developer with <strong>5+ years of experience</strong> in enterprise application development.</li>
+      <li>Expertise in <strong>.NET technologies</strong> – ASP.NET, MVC, ADO.NET, Entity Framework.</li>
+      <li>Strong backend development skills including <strong>REST APIs</strong> and secure data handling.</li>
+      <li>Hands-on experience with <strong>SQL Server</strong>, stored procedures, and performance optimization.</li>
+      <li>Experience working on <strong>production systems</strong> with high reliability requirements.</li>
+      <li>Strong understanding of <strong>Clean Code, SOLID principles, and SDLC</strong>.</li>
+      <li>Comfortable working with cross-functional teams and client-facing environments.</li>
+    </ul>
+  </div>
 </section>
 
 <section>
   <h2>Technical Skills</h2>
   <div class="grid">
-    <div class="card"><strong>Languages</strong><br>C#, HTML, CSS, JavaScript, jQuery</div>
-    <div class="card"><strong>Frameworks</strong><br>ASP.NET, MVC, ADO.NET, Entity Framework</div>
-    <div class="card"><strong>Databases</strong><br>SQL Server, Firebase</div>
-    <div class="card"><strong>Tools</strong><br>IIS, Git, SVN, REST APIs</div>
-    <div class="card"><strong>Domain</strong><br>Automotive, ECU Flashing, Engine Testing</div>
+    <div class="card">
+      <strong>Programming Languages</strong>
+      <ul>
+        <li>C#</li>
+        <li>SQL</li>
+        <li>JavaScript</li>
+        <li>HTML5 / CSS3</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <strong>Frameworks & Technologies</strong>
+      <ul>
+        <li>ASP.NET, ASP.NET MVC</li>
+        <li>ADO.NET, Entity Framework</li>
+        <li>RESTful APIs</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <strong>Database & Backend</strong>
+      <ul>
+        <li>SQL Server</li>
+        <li>Stored Procedures</li>
+        <li>Query Optimization</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <strong>Tools & Platforms</strong>
+      <ul>
+        <li>Visual Studio</li>
+        <li>IIS</li>
+        <li>Git / SVN</li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -190,84 +219,50 @@ footer a {
 
   <div class="card">
     <h3>Dynomerk Controls India Pvt. Ltd – Pune</h3>
-    <p><strong>Assistant Software Engineer</strong> (Feb 2020 – Present)</p>
+    <p><strong>Software Developer</strong> | Feb 2020 – Present</p>
     <ul>
-      <li>Developed automotive testing & ECU flashing software</li>
-      <li>Designed MES & SAP integrated web systems</li>
-      <li>Worked on real-time engine & chassis dyno applications</li>
-      <li>Handled SQL Server optimization and production support</li>
+      <li>Developed scalable enterprise .NET applications.</li>
+      <li>Designed backend APIs and secure data handling.</li>
+      <li>Optimized SQL Server queries for performance.</li>
+      <li>Implemented role-based access control.</li>
+      <li>Provided production support and bug fixes.</li>
     </ul>
   </div>
-
-  <br>
 
   <div class="card">
-    <h3>Iconsys Tech Vision Pvt. Ltd.</h3>
-    <p><strong>Junior Software Engineer</strong> (Dec 2018 – Dec 2019)</p>
+    <h3>Iconsys Tech Vision Pvt. Ltd</h3>
+    <p><strong>Junior Software Developer</strong> | Dec 2018 – Dec 2019</p>
     <ul>
-      <li>Developed ASP.NET web applications</li>
-      <li>UI designing and issue resolution</li>
+      <li>Developed ASP.NET web applications.</li>
+      <li>Designed UI components and reports.</li>
+      <li>Resolved defects and enhancements.</li>
     </ul>
   </div>
 </section>
 
 <section>
-  <h2>Key Projects</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>CDMS – Centralized Database Management System</h3>
-      <p>Vehicle test data, ECU flashing & SAP integration.</p>
-      <p><strong>Clients:</strong> Bajaj Auto, Suzuki, Tata Motors</p>
-    </div>
-    <div class="card">
-      <h3>ECU Flashing & Diagnostics Tool</h3>
-      <p>Desktop application for ECU parameter tuning & firmware flashing.</p>
-    </div>
-    <div class="card">
-      <h3>Engine & Chassis Dyno Software</h3>
-      <p>Real-time monitoring with automated test execution.</p>
-    </div>
-    <div class="card">
-      <h3>EDSM with GST</h3>
-      <p>Billing & inventory system with GST reports.</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2>Services</h2>
-  <div class="grid">
-    <div class="card"><div class="service-icon">💻</div>Web & Desktop Development</div>
-    <div class="card"><div class="service-icon">🚗</div>Automotive Testing Software</div>
-    <div class="card"><div class="service-icon">🔌</div>ECU Flashing & Diagnostics</div>
-    <div class="card"><div class="service-icon">🗄️</div>SQL Server & Database Design</div>
-  </div>
-</section>
-
-<section>
-  <h2>Achievements</h2>
+  <h2>Career Highlights</h2>
   <div class="stats">
-    <div class="stat"><h3>5+</h3>Years Experience</div>
-    <div class="stat"><h3>20+</h3>Projects Delivered</div>
-    <div class="stat"><h3>10+</h3>Automotive Test Modes</div>
-    <div class="stat"><h3>5+</h3>OEM Clients</div>
+    <div class="card stat"><h3>5+</h3>Years Experience</div>
+    <div class="card stat"><h3>20+</h3>Projects</div>
+    <div class="card stat"><h3>99%</h3>Stability</div>
+    <div class="card stat"><h3>100%</h3>Production Use</div>
   </div>
 </section>
 
 <section id="contact">
-  <h2>Contact Me</h2>
+  <h2>Contact Information</h2>
   <div class="card">
     <p><strong>Email:</strong> 22kar.pk@gmail.com</p>
     <p><strong>Mobile:</strong> +91 9765305500</p>
     <p><strong>Location:</strong> Pune, India</p>
-    <p><strong>LinkedIn:</strong> <a href="#">linkedin.com/in/pankaj-baviskar</a></p>
+    <p><strong>LinkedIn:</strong> linkedin.com/in/pankaj-baviskar</p>
   </div>
 </section>
 
 <footer>
-  <p>© 2025 Pankaj Baviskar | Software Engineer</p>
+  © 2025 Pankaj Baviskar · Software Developer
 </footer>
 
 </body>
 </html>
-
